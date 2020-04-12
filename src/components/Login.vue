@@ -80,7 +80,7 @@ export default {
 
                 // 如果通过，发送ajax请求,传送的数据为loginForm对象
                 this.$axios.post('login',this.loginForm).then((res)=>{
-                    console.log(res.data);
+                    // console.log(res.data);
                     if(res.data.meta.status !== 200){
                         return this.$message.error('用户名或密码错误，登陆失败！');
                     }

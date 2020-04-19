@@ -265,7 +265,7 @@ export default {
             })
         },
         // 展示编辑用户信息的对话框
-        showEditDialog(){
+        async showEditDialog(){
             this.editDialogVisible = true;
         }
     }

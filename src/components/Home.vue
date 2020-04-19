@@ -71,8 +71,8 @@
         },
         methods:{
             logout(){
-                // 清空sessionStorage,主要是清楚token
-                window.sessionStorage.clear();
+                // 清除sessionStorage中的token
+                window.sessionStorage.removeItem('token');
                 // 跳转到login页面
                 this.$router.push('/login');
             },

@@ -70,6 +70,7 @@ export default {
     methods:{
         // 重置登陆表单
         resetForm(){
+            // 重置表单
             this.$refs.loginFormRef.resetFields();
         },
         login(){
@@ -85,6 +86,7 @@ export default {
                         return this.$message.error('用户名或密码错误，登陆失败！');
                     }
                     this.$message.success('登陆成功！');
+                    console.log(res.data)
                     // 将登陆成功之后的token，保存到客户端的sessionStorage中
                     window.sessionStorage.setItem('token',res.data.data.token);
                     // 通过编程式导航 跳转到主页，路由地址 /home

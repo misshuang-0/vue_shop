@@ -38,11 +38,8 @@ router.beforeEach((to,from,next)=>{
   // 不是登陆页，判断是否有token
   // 获取token
   const tokenStr = window.sessionStorage.getItem('token');
-  if(!tokenStr){
-    return next('/login');
-  }else{
+  if(!tokenStr) return next('/login');
     next();
-  }
 })
 
 export default router
